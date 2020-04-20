@@ -1,0 +1,69 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Employee Producer API Swagger",
+        "version": "1.0.0",
+        "title": "SWAGGER API DOCS"
+    },
+    "host": "localhost",
+    "basePath": "/api/v1",
+    "tags": [{
+        "name": "01. Upload File",
+        "description": ""
+    }],
+    "schemes": [
+        "https"
+    ],
+    "paths": {
+
+        "/upload-file/": {
+            "post": {
+                "tags": [
+                    "01. Upload File"
+                ],
+                "description": "Upload File",
+                "summary": "Upload file for processing",
+                "parameters": [
+                    {
+                        "name": "Upload File",
+                        "description": "Upload file for processing",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "required": ["files"],
+                            "properties": {
+                                "hostName": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                },
+                                "author": {
+                                    "type": "string"
+                                },
+                                "publishedDate": {
+                                    "type": "array"
+                                },
+                                "phraseMap": {
+                                    "type": "object",
+                                    "properties": {
+                                        "0": {
+                                            "type": "string",
+                                            "default": "article sentense"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Facts and opinion saved successfully"
+                    }
+                },
+                "x-swagger-router-controller": "nn"
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "local": {
+        "port": 5001,
+        "db_username": "",
+        "db_password": "",
+        "db_url": "localhost",
+        "db_port": 27017,
+        "db_database": "employeeTest",
+        "secretKey": "random_secret_key",
+        "logging" : true
+    },
+    "uat": {
+        "port": 5001,
+        "test": "uat",
+        "db_username": "",
+        "db_password": "",
+        "db_url": "localhost",
+        "db_port": 27017,
+        "db_database": "employeeTest",
+        "saltWorkFactor": 10,
+        "secretKey": "random_secret_key",
+        "logging" : true
+    },
+    "testing": {
+        "url": "localhost:3002",
+        "port": 3002,
+        "test": "local",
+        "db_username": "",
+        "db_password": "",
+        "db_url": "localhost",
+        "db_port": 27017,
+        "db_database": "employeeTest",
+        "saltWorkFactor": 10,
+        "secretKey": "random_secret_key",
+        "logging" : true
+    },
+    "production": {
+        "port": 5001,
+        "test": "production",
+        "db_username": "",
+        "db_password": "",
+        "db_url": "172.30.0.150",
+        "db_port": 27017,
+        "db_database": "employeeTest",
+        "saltWorkFactor": 10,
+        "secretKey": "random_secret_key",
+        "logging" : true
+    }
+}
